@@ -26,14 +26,37 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>13.209.42.36</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>true</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>true</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>true</string>
+	<key>NSLocationDefaultAccuracyReduced</key>
+	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string>Privacy - Location Default Accuracy Reduced</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -48,5 +71,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSMotionUsageDescription</key>
+	<string>이 앱이 움직임을 추적하도록 허용</string>
 </dict>
 </plist>
